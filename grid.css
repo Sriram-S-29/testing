@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: wheat;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 250px 150px auto;
+  justify-content: center;
+  grid-template-areas:
+    "box1 box1 box2"
+    "box3 box4 box5"
+    "box6 box6 box7";
+  gap: 3%;
+  padding: 10px;
+}
+
+.box1 {
+  background-color: antiquewhite;
+  grid-area: box1;
+  background-image: url(./img/1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box2 {
+  background-color: antiquewhite;
+  grid-area: box2;
+  background-image: url(./img/2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box3 {
+  background-image: url(./img/3.png);
+  background-color: antiquewhite;
+  grid-area: box3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box4 {
+  background-image: url(./img/4.png);
+  background-color: antiquewhite;
+  grid-area: box4;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box5 {
+  background-image: url(./img/download.png);
+  background-color: antiquewhite;
+  grid-area: box5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box6 {
+  background-image: url(./img/gmail.png);
+  background-color: antiquewhite;
+  grid-area: box6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box7 {
+  background-image: url(./img/4.png);
+  background-color: antiquewhite;
+  grid-area: box7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(250, 235, 215, 0);
+  }
+  
+  .bar {
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    background-color: rgb(4, 2, 70);
+    border-radius: 10px;
+    animation: scale-up4 1s linear infinite;
+  }
+  
+  .bar:nth-child(2) {
+    height: 35px;
+    margin: 0 5px;
+    animation-delay: .25s;
+  }
+  
+  .bar:nth-child(3) {
+    animation-delay: .5s;
+  }
+  
+  @keyframes scale-up4 {
+    20% {
+      background-color: #370fff;
+      transform: scaleY(1.5);
+    }
+  
+    40% {
+      transform: scaleY(1);
+    }
+  }
+
+@media screen and (max-width: 772px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 250px 150px 150px auto;
+    justify-content: center;
+    grid-template-areas:
+      "box1 box1"
+      "   box2    box3         "
+      " box4 box5"
+      "box6  box7";
+  }
+}
